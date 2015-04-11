@@ -72,7 +72,7 @@ public class MainFragment extends Fragment {
                Firebase userRef = myRef.child("Users/" + key);
                userRef.setValue(user);
 
-               Intent goProfilePage = new Intent(getActivity(), ProfilePage.class);
+               Intent goProfilePage = new Intent(getActivity(), MenuActivity.class);
                goProfilePage.putExtra("firstName", firstName);
                goProfilePage.putExtra("lastName", lastName);
                goProfilePage.putExtra("profilePic", imageBitmap1.toString());

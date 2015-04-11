@@ -1,7 +1,61 @@
 <resources>
     <string name="app_name">CNote</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="facebook_app_id">440732496095179</string>
     <string name="title_activity_profile_page">ProfilePage</string>
+        <string name="text_welcome">Welcome!</string>
+        <string name="text_email">Email:</string>
+        <string name="text_email_input">john@example.com</string>
+        <string name="text_password">Password:</string>
+        <string name="text_password_input" style="@android:color/white">**********</string>
+        <string name="login_text_button">Login</string>
+        <string name="sign_up_text">Not a member? Join today!</string>
+        <string name="sign_up_text_button">Sign Up</string>
+        <string name="text_signature">Brought to you by - Zodiac Studios</string>
+        <string name="uploads">image</string>
+        <string name="title_activity_account">Account</string>
+        <string name="title_section1">My Class</string>
+        <string name="title_section2">Messages</string>
+        <string name="title_section3">Add Class</string>
+        <string name="title_section4">Remove Class</string>
+        <string name="title_section5">Settings</string>
+        <string name="title_section6">About</string>
+        <string name="title_section7">Logout</string>
+        <string name="navigation_drawer_open">Open navigation drawer</string>
+        <string name="navigation_drawer_close">Close navigation drawer</string>
+        <string name="action_example">Example action</string>
+        <string name="spinnerPrompt_AC1">Select A Course</string>
+        <string name="spinnerPrompt_AC2">Select Course Number</string>
+        <string name="user_name">Welcome, </string>
+
+        <string-array name="Settings">
+            <item>Change Email</item>
+            <item>Something</item>
+            <item>Something</item>
+            <item>Change Password</item>
+            <item>Something</item>
+            <item>Something</item>
+            <item>Delete Account</item>
+        </string-array>
+
+        <string-array name="Status">
+            <item>Student</item>
+            <item>Teacher Assistant</item>
+            <item>Professor</item>
+        </string-array>
+        <string name="title_activity_notes_feed">NotesFeed</string>
+        <string name="hello_world">Hello world!</string>
+
+        <string-array name="contact_list_items">
+            <item name="item_title">Contact</item>
+            <item name="item_number">+41 41 41</item>
+            <item name="item_email">xxx@email.com</item>
+            <item name="item_website">www.website.com</item>
+        </string-array>
+
+        <string-array name="EditProfile">
+            <item >Change picture</item>
+            <item >Something</item>
+            <item >Something</item>
+        </string-array>
 </resources>
