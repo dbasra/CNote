@@ -20,7 +20,8 @@ import com.firebase.client.Firebase;
 /**
  * Created by Michael on 4/11/2015.
  */
-public class Account extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks  {
+public class Account extends ActionBarActivity
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks  {
 
     private Firebase myFirebaseRef;
     /**
@@ -44,7 +45,6 @@ public class Account extends ActionBarActivity implements NavigationDrawerFragme
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        email = ImportantMethods.uid(myFirebaseRef);
         mTitle = getTitle();
 
         // Set up the drawer.

@@ -79,7 +79,7 @@ public class ProfilePage extends android.support.v4.app.Fragment {
 
 //        mProgress = (ProgressBar) findViewById(R.id.progressBar);
 //        progressNum = (TextView) findViewById(R.id.levelNum);
-        mProgress.setMax(200);
+//        mProgress.setMax(200);
 
         // mProgress.setProgress(ImportantMethods.myLevel(fBaseRef)); // get info from dataBase
         // progressNum.setText(mProgress.toString());
@@ -91,16 +91,16 @@ public class ProfilePage extends android.support.v4.app.Fragment {
 
         callParentMethod();
 
-        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.profile_picture);
-        roundedImage = new RoundImage(bm);
-        profilePic.setImageDrawable(roundedImage);
-        Bitmap bpImage = StringToBitMap(image);
-        Bitmap resized = Bitmap.createScaledBitmap(bpImage, 200, 200, true);
-        Bitmap conv_bm = getRoundedRectBitmap(resized, 200);
-
-        // RoundImage roundedImagePp = new RoundImage(image);
-
-        profilePic.setImageBitmap(conv_bm);
+//        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.profile_picture);
+//        roundedImage = new RoundImage(bm);
+//        profilePic.setImageDrawable(roundedImage);
+//        Bitmap bpImage = StringToBitMap(image);
+//        Bitmap resized = Bitmap.createScaledBitmap(bpImage, 200, 200, true);
+//        Bitmap conv_bm = getRoundedRectBitmap(resized, 200);
+//
+//        // RoundImage roundedImagePp = new RoundImage(image);
+//
+        profilePic.setImageBitmap(StringToBitMap(image));
         return rootview;
     }
 

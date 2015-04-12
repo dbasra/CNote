@@ -40,56 +40,61 @@ public class MainFragment extends Fragment {
     Bitmap bmp;
 
     private CallbackManager mCallBackManager;
-    private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
-        @Override
-        public void onSuccess(LoginResult loginResult) {
-            ArrayList<String> classes = new ArrayList<>();
-            classes.add("blank");
-            ArrayList<String> classMates = new ArrayList<>();
-            classMates.add("blank");
-            ArrayList<String> pinnedNotes = new ArrayList<>();
-            pinnedNotes.add("blank");
-            AccessToken accessToken = loginResult.getAccessToken();
-            Profile profile = Profile.getCurrentProfile();
-           if (profile != null) {
-               key = profile.getId();
-               firstName = profile.getFirstName();
-               lastName = profile.getLastName();
-               imageBitmap1 = profile.getProfilePictureUri(100,100);
+     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
+                @Override
+                public void onSuccess(LoginResult loginResult) {
+                    ArrayList<String> classes = new ArrayList<>();
+                    classes.add("blank");
+                    ArrayList<String> classMates = new ArrayList<>();
+                    classMates.add("blank");
+                    ArrayList<String> pinnedNotes = new ArrayList<>();
+                    pinnedNotes.add("blank");
 
-               HashMap<String, Object> user = new HashMap<String, Object>();
-               user.put("firstName", firstName);
-               user.put("lastName", lastName);
-               user.put("key", key);
-               user.put("Number of Posts" , posts);
-               user.put("Level" , level);
-               user.put("Rating", starRating);
-               user.put("Classes", classes);
-               user.put("Classmates", classMates);
-               user.put("PinnedNotes", pinnedNotes);
-               user.put("p", imageBitmap1.toString());
 
-               Firebase userRef = myRef.child("Users/" + key);
-               userRef.setValue(user);
+                    AccessToken accessToken = loginResult.getAccessToken();
+                    Profile profile = Profile.getCurrentProfile();
 
-               Intent goProfilePage = new Intent(getActivity(), MenuActivity.class);
-               goProfilePage.putExtra("firstName", firstName);
-               goProfilePage.putExtra("lastName", lastName);
-               goProfilePage.putExtra("profilePic", imageBitmap1.toString());
-               startActivity(goProfilePage);
-           }
-        }
+                    if (profile != null) {
+                        key = profile.getId();
+                        firstName = profile.getFirstName();
+                        lastName = profile.getLastName();
+                        imageBitmap1 = profile.getProfilePictureUri(100,100);
 
-        @Override
-        public void onCancel() {
+                        HashMap<String, Object> user = new HashMap<String, Object>();
+                        user.put("firstName", firstName);
+                        user.put("lastName", lastName);
+                        user.put("key", key);
+                        user.put("Number of Posts" , posts);
+                        user.put("Level" , level);
+                        user.put("Rating", starRating);
+                        user.put("Classes", classes);
+                        user.put("Classmates", classMates);
+                        user.put("PinnedNotes", pinnedNotes);
+                        user.put("p", imageBitmap1.toString());
 
-        }
+                        Firebase userRef = myRef.child("Users/" + key);
+                        userRef.setValue(user);
 
-        @Override
-        public void onError(FacebookException e) {
+                        Intent goProfilePage = new Intent(getActivity(), MenuActivity.class);
+                        goProfilePage.putExtra("firstName", firstName.toString());
+                        goProfilePage.putExtra("lastName", lastName.toString());
+                        goProfilePage.putExtra("profilePic", imageBitmap1.toString());
+                        startActivity(goProfilePage);
+                    }
 
-        }
-    };
+                }
+
+                @Override
+                public void onCancel() {
+
+                }
+
+                @Override
+                public void onError(FacebookException e) {
+
+                }
+            };
+
 
     public MainFragment(){
 
@@ -122,4 +127,6 @@ public class MainFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         mCallBackManager.onActivityResult(requestCode,resultCode,data);
     }
+
+
 }

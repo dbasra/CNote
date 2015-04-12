@@ -50,7 +50,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         // attach to current activity;
         resideMenu = new ResideMenu(MenuActivity.this);
         //set background of menu
-        resideMenu.setBackground(R.drawable.test_bg);
+        resideMenu.setBackground(R.drawable.menubg_new);
         resideMenu.attachToActivity(MenuActivity.this);
         // resideMenu.setMenuListener(menuListener);
         //valid scale factor is between 0.0f and 1.0f. leftmenu'width is 150dip.
@@ -82,6 +82,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
 
         // You can disable a direction by setting ->
         // resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT);
+
 
         findViewById(R.id.title_bar_left_menu).setOnClickListener(new View.OnClickListener() {
             @Override

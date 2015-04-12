@@ -149,7 +149,7 @@ public class ResideMenu extends FrameLayout {
      */
     public void setShadowVisible(boolean isVisible){
         if (isVisible)
-            imageViewShadow.setBackgroundResource(R.drawable.test_bg);
+            imageViewShadow.setBackgroundResource(R.drawable.shadow);
         else
             imageViewShadow.setBackgroundResource(0);
     }
