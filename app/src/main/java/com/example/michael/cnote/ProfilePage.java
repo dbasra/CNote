@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -34,7 +35,9 @@ import com.firebase.client.Firebase;
 import java.util.ArrayList;
 
 
-public class ProfilePage extends android.support.v4.app.Fragment {
+public class ProfilePage extends Fragment {
+
+
     private TextView firstTxtView;
     private ImageView profilePic;
 
@@ -68,6 +71,7 @@ public class ProfilePage extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootview = inflater.inflate(R.layout.activity_profile_page, container,false);
+
         fBaseRef = new Firebase(ImportantMethods.FIREBASE_URL);
         String f = getActivity().getIntent().getExtras().getString("firstName");
         String l = getActivity().getIntent().getExtras().getString("lastName");
@@ -101,6 +105,7 @@ public class ProfilePage extends android.support.v4.app.Fragment {
 //        // RoundImage roundedImagePp = new RoundImage(image);
 //
         profilePic.setImageBitmap(StringToBitMap(image));
+
         return rootview;
     }
 

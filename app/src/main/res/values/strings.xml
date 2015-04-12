@@ -58,4 +58,7 @@
             <item >Something</item>
             <item >Something</item>
         </string-array>
+    <string name="title_activity_your_classes">YourClasses</string>
+    <string name="title_activity_your_friends">YourFriends</string>
+    <string name="title_activity_pinned_notes">PinnedNotes</string>
 </resources>
